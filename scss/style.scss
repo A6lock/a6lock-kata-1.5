@@ -1,0 +1,22 @@
+@import '_fonts';
+@import '_normalize';
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    background-color: #F2F2F2;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+//============================================================================================
+
+
