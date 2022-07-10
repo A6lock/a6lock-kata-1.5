@@ -25,16 +25,16 @@ swiper = new Swiper('.swiper', {
 });
 
 const brandsShowMore = document.querySelector('.show-more__btn'),
-	brandsContainer = document.querySelector('.brands__container'),
+	brandsContainer = document.querySelector('.brands__list-items'),
 	brandsShowMoreTxt = brandsShowMore.querySelector('.show-more__text');
 
 
 brandsShowMore.addEventListener('click', () => {
 
-	brandsContainer.classList.toggle('brands__container--show-more');
+	brandsContainer.classList.toggle('brands__list-items--show-more');
 	brandsShowMoreTxt.classList.toggle('show-more__text--hide');
 
-	if (brandsContainer.classList.contains('brands__container--show-more')) {
+	if (brandsContainer.classList.contains('brands__list-items--show-more')) {
 
 		brandsShowMoreTxt.textContent = 'Скрыть';
 	} else {
