@@ -1,43 +1,53 @@
-swiper = new Swiper('.swiper', {
+document.addEventListener("DOMContentLoaded", () => {
 
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	},
+    const swiper = new Swiper('.swiper', {
 
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
 
-	slidesPerView: 1.2,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
 
-	spaceBetween: 16,
+        slidesPerView: 1.2,
 
-	slidesPerGroup: 1,
+        loop: true,
 
-	breakpoints: {
-		// when window width is >= 320px
-		500: {
-			slidesPerView: 2.4
-		}
-	}
-});
+        spaceBetween: 16,
 
-const brandsShowMore = document.querySelector('.show-more__btn'),
-	brandsContainer = document.querySelector('.brands__list-items'),
-	brandsShowMoreTxt = brandsShowMore.querySelector('.show-more__text');
+        slidesPerGroup: 1,
 
+        breakpoints: {
 
-brandsShowMore.addEventListener('click', () => {
+            500: {
+                slidesPerView: 2.4
+            }
+        },
 
-	brandsContainer.classList.toggle('brands__list-items--show-more');
-	brandsShowMoreTxt.classList.toggle('show-more__text--hide');
+    });
 
-	if (brandsContainer.classList.contains('brands__list-items--show-more')) {
+    if (window.matchMedia('(min-width: 767px)').matches) {
+        swiper.destroy();
+    }
 
-		brandsShowMoreTxt.textContent = 'Скрыть';
-	} else {
-		brandsShowMoreTxt.textContent = 'Показать все';
-	}
+    const brandsShowMore = document.querySelector('.show-more__btn');
+    const brandsContainer = document.querySelector('.brands__list-items');
+    const brandsShowMoreTxt = brandsShowMore.querySelector('.show-more__text');
+
+    const toggleBrandsShowMore = () => {
+        brandsContainer.classList.toggle('brands__list-items--show-more');
+        brandsShowMoreTxt.classList.toggle('show-more__text--hide');
+
+        if (brandsContainer.classList.contains('brands__list-items--show-more')) {
+
+            brandsShowMoreTxt.textContent = 'Скрыть';
+        } else {
+            brandsShowMoreTxt.textContent = 'Показать все';
+        }
+    }
+
+    brandsShowMore.addEventListener('click', toggleBrandsShowMore);
 });
