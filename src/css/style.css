@@ -1,32 +1,29 @@
 @font-face {
-  font-family: 'TT Lakes';
-  src: url("../fonts/TTLakes-Regular.woff2") format("woff2"), url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-family: "TT Lakes";
+  src: url("../../assets/fonts/TTLakes-Regular.woff2") format("woff2"), url("../../assets/fonts/TTLakes-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Lakes';
-  src: url("../fonts/TTLakes-Medium.woff2") format("woff2"), url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-family: "TT Lakes";
+  src: url("../../assets/fonts/TTLakes-Medium.woff2") format("woff2"), url("../../assets/fonts/TTLakes-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Lakes';
-  src: url("../fonts/TTLakes-Bold.woff2") format("woff2"), url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-family: "TT Lakes";
+  src: url("../../assets/fonts/TTLakes-Bold.woff2") format("woff2"), url("../../assets/fonts/TTLakes-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-
 html,
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'TT Lakes';
+  font-family: "TT Lakes";
   font-size: 16px;
   background-color: #F2F2F2;
   height: 100%;
@@ -59,7 +56,6 @@ li {
 
 .brands__head {
   background-image: -webkit-gradient(linear, right top, left top, from(#F8F8F8), color-stop(98.61%, #FFFFFF));
-  background-image: -webkit-linear-gradient(right, #F8F8F8 0%, #FFFFFF 98.61%);
   background-image: -o-linear-gradient(right, #F8F8F8 0%, #FFFFFF 98.61%);
   background-image: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -79,7 +75,7 @@ li {
 }
 
 .title__text {
-  font-family: 'TT Lakes';
+  font-family: "TT Lakes";
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -123,7 +119,7 @@ li {
   height: 40px;
   border: 2px solid #FF3E79;
   border-radius: 50%;
-  background: url(../icons/dropdown.svg) no-repeat center center;
+  background: url(../../assets/icons/dropdown.svg) no-repeat center center;
 }
 
 .swiper {
@@ -152,18 +148,17 @@ li {
 
 .show-more__text {
   display: inline-block;
-  font-family: 'TT Lakes';
+  font-family: "TT Lakes";
   font-size: 1rem;
   line-height: 24px;
   font-weight: 500;
 }
-
 .show-more__text::before {
   content: "";
   display: inline-block;
   width: 8px;
   height: 11px;
-  background-image: url(../icons/check-down_icon.svg);
+  background-image: url(../../assets/icons/check-down_icon.svg);
   vertical-align: center;
   margin: 0 13px 0 10px;
   -webkit-transition: all 1ms ease;
@@ -251,7 +246,6 @@ li {
     min-height: 72px;
   }
 }
-
 @media (min-width: 1119.8px) {
   .brands__list-items {
     gap: 16px 32px;
