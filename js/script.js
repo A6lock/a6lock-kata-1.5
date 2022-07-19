@@ -1,37 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        const swiper = new Swiper('.swiper', {
 
-    const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+            slidesPerView: 1.2,
 
-        slidesPerView: 1.2,
+            loop: true,
 
-        loop: true,
+            spaceBetween: 16,
 
-        spaceBetween: 16,
+            slidesPerGroup: 1,
 
-        slidesPerGroup: 1,
+            breakpoints: {
 
-        breakpoints: {
+                500: {
+                    slidesPerView: 2.4
+                }
+            },
 
-            500: {
-                slidesPerView: 2.4
-            }
-        },
-
-    });
-
-    if (window.matchMedia('(min-width: 767px)').matches) {
-        swiper.destroy();
+        });
     }
+
 
     const brandsShowMore = document.querySelector('.show-more__btn');
     const brandsContainer = document.querySelector('.brands__list-items');
