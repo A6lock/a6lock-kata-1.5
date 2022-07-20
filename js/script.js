@@ -2,30 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
         const swiper = new Swiper('.swiper', {
 
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 16,
+            width: 240,
 
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },
-
-            slidesPerView: 1.2,
-
-            loop: true,
-
-            spaceBetween: 16,
-
-            slidesPerGroup: 1,
-
-            breakpoints: {
-
-                500: {
-                    slidesPerView: 2.4
-                }
-            },
+            }
 
         });
     }

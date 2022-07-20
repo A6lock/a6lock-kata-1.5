@@ -45,7 +45,7 @@ li {
 
 .brands__title {
     transform: matrix(-1, 0, 0, 1, 0, 0);
-    min-height: 80px;
+    //min-height: 80px;
     margin: 0 auto;
     width: 95%;
     padding: 16px 0;
@@ -76,7 +76,7 @@ li {
     border-radius: 6px;
     max-height: 72px;
     padding: 16px;
-    
+    width: 240px;
     
 } 
 
@@ -176,10 +176,10 @@ li {
             overflow: hidden;
             width: 95%;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            gap: 16px 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 16px;
+            column-gap: 24px;
             margin-bottom: 24px;
             transition: all 0.3s ease;
         }
@@ -187,7 +187,7 @@ li {
         .brands__list-items--show-more {
             
             @media (min-width: 768px ) {
-                height: 341px;
+                height: 344px;
             }
 
             @media (min-width: 1120px ) {
@@ -196,9 +196,6 @@ li {
         }
 
         .brands__list-item {
-
-            min-width: auto;
-            flex: 1 0 30%;
             transition: all 0.2s ease;
 
             &:hover {
@@ -231,6 +228,7 @@ li {
 
         .brands__list-items {
             gap: 16px 32px;
+            grid-template-columns: repeat(4, 1fr);
         }
 
         .brands__list-item {
